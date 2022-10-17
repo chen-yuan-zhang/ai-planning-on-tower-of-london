@@ -1,0 +1,135 @@
+<!DOCTYPE html><html class=''>
+<head>
+    <meta charset='UTF-8'>
+    <meta name="robots" content="noindex">
+    <title>Tower of London</title>
+    <link rel='stylesheet' type='text/css' href='jspsych/css/jspsych.css'>
+    <link rel='stylesheet' type='text/css' href='jspsych/css/default_style.css'>
+    <link rel='stylesheet' type='text/css' href='jspsych/css/style.css'>
+</head>
+
+<body>
+</body>
+
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjs/3.4.1/math.min.js'></script>
+<script src='jspsych/jspsych.js'></script>
+<script src='jspsych/welcome.js'></script>
+<script src='jspsych/plugins/jspsych-text.js'></script>
+<script src='jspsych/poldrack_plugins/jspsych-poldrack-text.js'></script>
+<script src='jspsych/poldrack_plugins/jspsych-poldrack-instructions.js'></script>
+<script src='jspsych/poldrack_plugins/jspsych-attention-check.js'></script>
+<script src='jspsych/poldrack_plugins/jspsych-single-stim-button.js'></script>
+<script src='jspsych/plugins/jspsych-survey-multi-choice.js'></script>
+<script src='jspsych/poldrack_plugins/jspsych-poldrack-single-stim.js'></script>
+<script src='jspsych/plugins/jspsych-survey-text.js'></script>
+<script src='jspsych/poldrack_plugins/poldrack_utils.js'></script>
+<script src='experiment.js'></script>
+
+<body>
+	  <div id="welcome"></div>
+  </body>
+
+<script>
+
+
+    var code;
+
+    /* function to start the jsPsych experiment */
+    function startExperiment(){
+      // record the turkcode in the jsPsych data
+      if (window.location.href.includes("?")){
+        code = window.location.href.split('?')[1].split('&')[0].split('=')[1];
+      } else {
+        code = 'test';
+      }
+      jsPsych.data.addProperties({
+        ProlificCode: code
+      });
+
+      var flag = (0.5 > Math.random())
+      jsPsych.data.addProperties({
+        ProlificCode: code,
+        setting:flag
+      });
+
+      if (flag){
+        jsPsych.init({
+          timeline: tower_of_london_experiment,
+          show_progress_bar: true,
+          on_finish: function() {
+            endExperiment( jsPsych.data.dataAsCSV(), function() { document.write('<div id="endscreen" class="endscreen" style="width:1000px"><div class="endscreen" style="text-align:center; border:0px solid; padding:10px; font-size:120%; width:800px; float:right"><p><br><br><br>All done!<br><br>To receive payment, click <a href="https://app.prolific.co/submissions/complete?cc=CWQFGTIP">HERE</a>. Please contact us if something goes wrong and we\'ll fix it as quickly as possible.</p></div></div>') })
+          }
+        });
+      }
+      else{
+        jsPsych.init({
+          timeline: tower_of_london_experiment_full,
+          show_progress_bar: true,
+          on_finish: function() {
+            endExperiment( jsPsych.data.dataAsCSV(), function() { document.write('<div id="endscreen" class="endscreen" style="width:1000px"><div class="endscreen" style="text-align:center; border:0px solid; padding:10px; font-size:120%; width:800px; float:right"><p><br><br><br>All done!<br><br>To receive payment, click <a href="https://app.prolific.co/submissions/complete?cc=CWQFGTIP">HERE</a>. Please contact us if something goes wrong and we\'ll fix it as quickly as possible.</p></div></div>') })
+          }
+        });
+      }
+    }
+
+    /* save and finish */
+    function endExperiment(dataset,callback) {
+      $.post('submit',{"content": dataset}); // uncomment to post data
+      // console.log(dataset); // comment out to avoid console log
+      setTimeout(callback,1000)
+    }
+
+    /* change the display property of a set of objects */
+    function setDisplay(theClass, theValue) {
+      var i, classElements = document.getElementsByClassName(theClass);
+      for (i = 0; i < classElements.length; i = i + 1) {
+        classElements[i].style.display = theValue;
+      }
+    }
+// $( document ).ready(function() {
+//
+//     jsPsych.init({
+//              timeline: tower_of_london_experiment,
+//              display_element: "getDisplayElement",
+//              fullscreen: true,
+//              on_trial_finish: function(data){
+//                addID('tower-of-london')
+//              },
+//
+//              on_finish: function(data){
+//
+//                  // Serialize the data
+//                  var promise = new Promise(function(resolve, reject) {
+//                      var data = jsPsych.data.dataAsJSON();
+//                      resolve(data);
+//                  })
+//
+//                  promise.then(function(data) {
+//
+//                      $.ajax({
+//                          type: "POST",
+//                          url: '/save',
+//                          data: { "data": data },
+//                          success: function(){ document.location = "/next" },
+//                          dataType: "application/json",
+//                          // Endpoint not running, local save
+//                          error: function(err) {
+//
+//                              if (err.status == 200){
+//                                 document.location = "/next"
+//                              } else {
+//                                  // If error, assue local save
+//                                  jsPsych.data.localSave('tower-of-london_results.csv', 'csv');
+//                             }
+//                          }
+//
+//                      });
+//                  })
+//              }
+//
+//       });
+// });
+welcome.run();
+</script>
+</html>
