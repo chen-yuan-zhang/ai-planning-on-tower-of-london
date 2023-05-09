@@ -1,0 +1,1137 @@
+
+********************************************************************************
+                                MACRO CYCLE: 1
+================================================================================
+RH-SPATIAL: 1
+--------------------------------------------------------------------------------
+PROPOSE-MOVE
+  1.00:   (SOLVE-PUZZLE-GOAL :ID 1)
+  1.00:   (PUZZLE :ID 8 :CONTENTS #2A((NIL 2 0) (NIL 1 NIL) (NIL NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (BALL :ID 4 :BALL 2)
+-->
+  SPEW:   0.00:   (DIRECT-MOVE :ID 12 :STATE #<PUZZLE 8> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 1 :TO-POCKET 1)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+--------------------------------------------------------------------------------
+PROPOSE-MOVE
+  1.00:   (SOLVE-PUZZLE-GOAL :ID 1)
+  1.00:   (PUZZLE :ID 8 :CONTENTS #2A((NIL 2 0) (NIL 1 NIL) (NIL NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (BALL :ID 3 :BALL 1)
+-->
+  SPEW:   0.00:   (DIRECT-MOVE :ID 11 :STATE #<PUZZLE 8> :BALL 1 :FROM-PEG 1 :FROM-POCKET 1 :TO-PEG 1 :TO-POCKET 0)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+--------------------------------------------------------------------------------
+PROPOSE-MOVE
+  1.00:   (SOLVE-PUZZLE-GOAL :ID 1)
+  1.00:   (PUZZLE :ID 8 :CONTENTS #2A((NIL 2 0) (NIL 1 NIL) (NIL NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (BALL :ID 2 :BALL 0)
+-->
+  SPEW:   0.00:   (DIRECT-MOVE :ID 10 :STATE #<PUZZLE 8> :BALL 0 :FROM-PEG 2 :FROM-POCKET 0 :TO-PEG 0 :TO-POCKET 2)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+********************************************************************************
+
+********************************************************************************
+                                MACRO CYCLE: 2
+================================================================================
+LH-EXECUTIVE: 1
+--------------------------------------------------------------------------------
+UNARY-PREFERENCE
+  1.00:   (PUZZLE :ID 8 :CONTENTS #2A((NIL 2 0) (NIL 1 NIL) (NIL NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (DIRECT-MOVE :ID 10 :STATE #<PUZZLE 8> :BALL 0 :FROM-PEG 2 :FROM-POCKET 0 :TO-PEG 0 :TO-POCKET 2)
+-->
+  SPEW:   0.00:   (PREFERENCE :ID 18 :BETTER-OPERATOR #<DIRECT-MOVE 10>)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+--------------------------------------------------------------------------------
+UNARY-PREFERENCE
+  1.00:   (PUZZLE :ID 8 :CONTENTS #2A((NIL 2 0) (NIL 1 NIL) (NIL NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (DIRECT-MOVE :ID 11 :STATE #<PUZZLE 8> :BALL 1 :FROM-PEG 1 :FROM-POCKET 1 :TO-PEG 1 :TO-POCKET 0)
+-->
+  SPEW:   0.00:   (PREFERENCE :ID 17 :BETTER-OPERATOR #<DIRECT-MOVE 11>)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+--------------------------------------------------------------------------------
+UNARY-PREFERENCE
+  1.00:   (PUZZLE :ID 8 :CONTENTS #2A((NIL 2 0) (NIL 1 NIL) (NIL NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (DIRECT-MOVE :ID 12 :STATE #<PUZZLE 8> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 1 :TO-POCKET 1)
+-->
+  SPEW:   0.00:   (PREFERENCE :ID 16 :BETTER-OPERATOR #<DIRECT-MOVE 12>)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+--------------------------------------------------------------------------------
+BINARY-PREFERENCE
+  1.00:   (PUZZLE :ID 8 :CONTENTS #2A((NIL 2 0) (NIL 1 NIL) (NIL NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (DIRECT-MOVE :ID 12 :STATE #<PUZZLE 8> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 1 :TO-POCKET 1)
+  1.00:   (DIRECT-MOVE :ID 11 :STATE #<PUZZLE 8> :BALL 1 :FROM-PEG 1 :FROM-POCKET 1 :TO-PEG 1 :TO-POCKET 0)
+-->
+  SPEW:   0.00:   (PREFERENCE :ID 15 :BETTER-OPERATOR #<DIRECT-MOVE 12> :WORSE-OPERATOR #<DIRECT-MOVE 11>)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+--------------------------------------------------------------------------------
+BINARY-PREFERENCE
+  1.00:   (PUZZLE :ID 8 :CONTENTS #2A((NIL 2 0) (NIL 1 NIL) (NIL NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (DIRECT-MOVE :ID 10 :STATE #<PUZZLE 8> :BALL 0 :FROM-PEG 2 :FROM-POCKET 0 :TO-PEG 0 :TO-POCKET 2)
+  1.00:   (DIRECT-MOVE :ID 11 :STATE #<PUZZLE 8> :BALL 1 :FROM-PEG 1 :FROM-POCKET 1 :TO-PEG 1 :TO-POCKET 0)
+-->
+  SPEW:   0.00:   (PREFERENCE :ID 14 :BETTER-OPERATOR #<DIRECT-MOVE 10> :WORSE-OPERATOR #<DIRECT-MOVE 11>)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+--------------------------------------------------------------------------------
+BINARY-PREFERENCE
+  1.00:   (PUZZLE :ID 8 :CONTENTS #2A((NIL 2 0) (NIL 1 NIL) (NIL NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (DIRECT-MOVE :ID 10 :STATE #<PUZZLE 8> :BALL 0 :FROM-PEG 2 :FROM-POCKET 0 :TO-PEG 0 :TO-POCKET 2)
+  1.00:   (DIRECT-MOVE :ID 12 :STATE #<PUZZLE 8> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 1 :TO-POCKET 1)
+-->
+  SPEW:   0.00:   (PREFERENCE :ID 13 :BETTER-OPERATOR #<DIRECT-MOVE 10> :WORSE-OPERATOR #<DIRECT-MOVE 12>)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+********************************************************************************
+
+********************************************************************************
+                                MACRO CYCLE: 3
+================================================================================
+LH-EXECUTIVE: 2
+--------------------------------------------------------------------------------
+SELECT-AMONG-UNARY-PREFERENCES
+  1.00:   (PUZZLE :ID 8 :CONTENTS #2A((NIL 2 0) (NIL 1 NIL) (NIL NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (DIRECT-MOVE :ID 10 :STATE #<PUZZLE 8> :BALL 0 :FROM-PEG 2 :FROM-POCKET 0 :TO-PEG 0 :TO-POCKET 2)
+  1.00:   (PREFERENCE :ID 18 :BETTER-OPERATOR #<DIRECT-MOVE 10>)
+-->
+  SPEW:   0.00:   (PREFERRED-OPERATOR :ID 19 :OPERATOR #<DIRECT-MOVE 10>)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+********************************************************************************
+
+********************************************************************************
+                                MACRO CYCLE: 4
+================================================================================
+LH-EXECUTIVE: 3
+--------------------------------------------------------------------------------
+SUPPRESS-PREFERRENCE
+  1.00:   (PREFERRED-OPERATOR :ID 19 :OPERATOR #<DIRECT-MOVE 10>)
+  1.00:   (PREFERENCE :ID 13 :BETTER-OPERATOR #<DIRECT-MOVE 10> :WORSE-OPERATOR #<DIRECT-MOVE 12>)
+  1.00:   (PUZZLE :ID 8 :CONTENTS #2A((NIL 2 0) (NIL 1 NIL) (NIL NIL NIL)))
+-->
+  SPEW:   1.00:   (PREFERENCE :ID 13 :BETTER-OPERATOR #<DIRECT-MOVE 10> :WORSE-OPERATOR #<DIRECT-MOVE 12>)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+--------------------------------------------------------------------------------
+SUPPRESS-PREFERRENCE
+  1.00:   (PREFERRED-OPERATOR :ID 19 :OPERATOR #<DIRECT-MOVE 10>)
+  1.00:   (PREFERENCE :ID 14 :BETTER-OPERATOR #<DIRECT-MOVE 10> :WORSE-OPERATOR #<DIRECT-MOVE 11>)
+  1.00:   (PUZZLE :ID 8 :CONTENTS #2A((NIL 2 0) (NIL 1 NIL) (NIL NIL NIL)))
+-->
+  SPEW:   1.00:   (PREFERENCE :ID 14 :BETTER-OPERATOR #<DIRECT-MOVE 10> :WORSE-OPERATOR #<DIRECT-MOVE 11>)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+--------------------------------------------------------------------------------
+SUPPRESS-PREFERRENCE
+  1.00:   (PREFERRED-OPERATOR :ID 19 :OPERATOR #<DIRECT-MOVE 10>)
+  1.00:   (PREFERENCE :ID 15 :BETTER-OPERATOR #<DIRECT-MOVE 12> :WORSE-OPERATOR #<DIRECT-MOVE 11>)
+  1.00:   (PUZZLE :ID 8 :CONTENTS #2A((NIL 2 0) (NIL 1 NIL) (NIL NIL NIL)))
+-->
+  SPEW:   1.00:   (PREFERENCE :ID 15 :BETTER-OPERATOR #<DIRECT-MOVE 12> :WORSE-OPERATOR #<DIRECT-MOVE 11>)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+--------------------------------------------------------------------------------
+SUPPRESS-PREFERRENCE
+  1.00:   (PREFERRED-OPERATOR :ID 19 :OPERATOR #<DIRECT-MOVE 10>)
+  1.00:   (PREFERENCE :ID 16 :BETTER-OPERATOR #<DIRECT-MOVE 12>)
+  1.00:   (PUZZLE :ID 8 :CONTENTS #2A((NIL 2 0) (NIL 1 NIL) (NIL NIL NIL)))
+-->
+  SPEW:   1.00:   (PREFERENCE :ID 16 :BETTER-OPERATOR #<DIRECT-MOVE 12>)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+--------------------------------------------------------------------------------
+SUPPRESS-PREFERRENCE
+  1.00:   (PREFERRED-OPERATOR :ID 19 :OPERATOR #<DIRECT-MOVE 10>)
+  1.00:   (PREFERENCE :ID 17 :BETTER-OPERATOR #<DIRECT-MOVE 11>)
+  1.00:   (PUZZLE :ID 8 :CONTENTS #2A((NIL 2 0) (NIL 1 NIL) (NIL NIL NIL)))
+-->
+  SPEW:   1.00:   (PREFERENCE :ID 17 :BETTER-OPERATOR #<DIRECT-MOVE 11>)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+--------------------------------------------------------------------------------
+SUPPRESS-PREFERRENCE
+  1.00:   (PREFERRED-OPERATOR :ID 19 :OPERATOR #<DIRECT-MOVE 10>)
+  1.00:   (PREFERENCE :ID 18 :BETTER-OPERATOR #<DIRECT-MOVE 10>)
+  1.00:   (PUZZLE :ID 8 :CONTENTS #2A((NIL 2 0) (NIL 1 NIL) (NIL NIL NIL)))
+-->
+  SPEW:   1.00:   (PREFERENCE :ID 18 :BETTER-OPERATOR #<DIRECT-MOVE 10>)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+================================================================================
+RH-SPATIAL: 2
+--------------------------------------------------------------------------------
+SUPPRESS-UNPREFERRED-OPERATOR
+  1.00:   (PREFERRED-OPERATOR :ID 19 :OPERATOR #<DIRECT-MOVE 10>)
+  1.00:   (DIRECT-MOVE :ID 10 :STATE #<PUZZLE 8> :BALL 0 :FROM-PEG 2 :FROM-POCKET 0 :TO-PEG 0 :TO-POCKET 2)
+  1.00:   (DIRECT-MOVE :ID 12 :STATE #<PUZZLE 8> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 1 :TO-POCKET 1)
+-->
+  SPEW:   1.00:   (DIRECT-MOVE :ID 12 :STATE #<PUZZLE 8> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 1 :TO-POCKET 1)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+--------------------------------------------------------------------------------
+SUPPRESS-UNPREFERRED-OPERATOR
+  1.00:   (PREFERRED-OPERATOR :ID 19 :OPERATOR #<DIRECT-MOVE 10>)
+  1.00:   (DIRECT-MOVE :ID 10 :STATE #<PUZZLE 8> :BALL 0 :FROM-PEG 2 :FROM-POCKET 0 :TO-PEG 0 :TO-POCKET 2)
+  1.00:   (DIRECT-MOVE :ID 11 :STATE #<PUZZLE 8> :BALL 1 :FROM-PEG 1 :FROM-POCKET 1 :TO-PEG 1 :TO-POCKET 0)
+-->
+  SPEW:   1.00:   (DIRECT-MOVE :ID 11 :STATE #<PUZZLE 8> :BALL 1 :FROM-PEG 1 :FROM-POCKET 1 :TO-PEG 1 :TO-POCKET 0)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+================================================================================
+LH-SPATIAL: 1
+--------------------------------------------------------------------------------
+PERFORM-MOVE
+  1.00:   (PUZZLE :ID 8 :CONTENTS #2A((NIL 2 0) (NIL 1 NIL) (NIL NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (DIRECT-MOVE :ID 10 :STATE #<PUZZLE 8> :BALL 0 :FROM-PEG 2 :FROM-POCKET 0 :TO-PEG 0 :TO-POCKET 2)
+  1.00:   (PREFERRED-OPERATOR :ID 19 :OPERATOR #<DIRECT-MOVE 10>)
+-->
+  SPEW:   0.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+********************************************************************************
+
+********************************************************************************
+                                MACRO CYCLE: 5
+================================================================================
+LH-EXECUTIVE: 4
+--------------------------------------------------------------------------------
+SUPPRESS-PREFERRED-OPERATOR-MARKER
+  1.00:   (PREFERRED-OPERATOR :ID 19 :OPERATOR #<DIRECT-MOVE 10>)
+  1.00:   (DIRECT-MOVE :ID 10 :STATE #<PUZZLE 8> :BALL 0 :FROM-PEG 2 :FROM-POCKET 0 :TO-PEG 0 :TO-POCKET 2)
+  1.00:   (PUZZLE :ID 8 :CONTENTS #2A((NIL 2 0) (NIL 1 NIL) (NIL NIL NIL)))
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+-->
+  SPEW:   1.00:   (PREFERRED-OPERATOR :ID 19 :OPERATOR #<DIRECT-MOVE 10>)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+================================================================================
+RH-SPATIAL: 3
+--------------------------------------------------------------------------------
+SUPPRESS-PERFORMED-PREFERRED-OPERATOR
+  1.00:   (PREFERRED-OPERATOR :ID 19 :OPERATOR #<DIRECT-MOVE 10>)
+  1.00:   (DIRECT-MOVE :ID 10 :STATE #<PUZZLE 8> :BALL 0 :FROM-PEG 2 :FROM-POCKET 0 :TO-PEG 0 :TO-POCKET 2)
+  1.00:   (PUZZLE :ID 8 :CONTENTS #2A((NIL 2 0) (NIL 1 NIL) (NIL NIL NIL)))
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+-->
+  SPEW:   1.00:   (DIRECT-MOVE :ID 10 :STATE #<PUZZLE 8> :BALL 0 :FROM-PEG 2 :FROM-POCKET 0 :TO-PEG 0 :TO-POCKET 2)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+--------------------------------------------------------------------------------
+PROPOSE-MOVE
+  1.00:   (SOLVE-PUZZLE-GOAL :ID 1)
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (BALL :ID 3 :BALL 1)
+-->
+  SPEW:   0.00:   (DIRECT-MOVE :ID 22 :STATE #<PUZZLE 20> :BALL 1 :FROM-PEG 1 :FROM-POCKET 1 :TO-PEG 1 :TO-POCKET 0)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+--------------------------------------------------------------------------------
+PROPOSE-MOVE
+  1.00:   (SOLVE-PUZZLE-GOAL :ID 1)
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (BALL :ID 4 :BALL 2)
+-->
+  SPEW:   0.00:   (DIRECT-MOVE :ID 21 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 1 :TO-POCKET 1)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+********************************************************************************
+
+********************************************************************************
+                                MACRO CYCLE: 6
+================================================================================
+LH-EXECUTIVE: 5
+--------------------------------------------------------------------------------
+UNARY-PREFERENCE
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (DIRECT-MOVE :ID 21 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 1 :TO-POCKET 1)
+-->
+  SPEW:   0.00:   (PREFERENCE :ID 25 :BETTER-OPERATOR #<DIRECT-MOVE 21>)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+--------------------------------------------------------------------------------
+UNARY-PREFERENCE
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (DIRECT-MOVE :ID 22 :STATE #<PUZZLE 20> :BALL 1 :FROM-PEG 1 :FROM-POCKET 1 :TO-PEG 1 :TO-POCKET 0)
+-->
+  SPEW:   0.00:   (PREFERENCE :ID 24 :BETTER-OPERATOR #<DIRECT-MOVE 22>)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+--------------------------------------------------------------------------------
+BINARY-PREFERENCE
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (DIRECT-MOVE :ID 21 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 1 :TO-POCKET 1)
+  1.00:   (DIRECT-MOVE :ID 22 :STATE #<PUZZLE 20> :BALL 1 :FROM-PEG 1 :FROM-POCKET 1 :TO-PEG 1 :TO-POCKET 0)
+-->
+  SPEW:   0.00:   (PREFERENCE :ID 23 :BETTER-OPERATOR #<DIRECT-MOVE 21> :WORSE-OPERATOR #<DIRECT-MOVE 22>)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+********************************************************************************
+
+********************************************************************************
+                                MACRO CYCLE: 7
+================================================================================
+LH-EXECUTIVE: 6
+--------------------------------------------------------------------------------
+SELECT-AMONG-UNARY-PREFERENCES
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (DIRECT-MOVE :ID 21 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 1 :TO-POCKET 1)
+  1.00:   (PREFERENCE :ID 25 :BETTER-OPERATOR #<DIRECT-MOVE 21>)
+-->
+  SPEW:   0.00:   (PREFERRED-OPERATOR :ID 26 :OPERATOR #<DIRECT-MOVE 21>)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+********************************************************************************
+
+********************************************************************************
+                                MACRO CYCLE: 8
+================================================================================
+RH-EXECUTIVE: 1
+--------------------------------------------------------------------------------
+PROPOSE-UNBLOCK-POCKET-GOAL
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (DIRECT-MOVE :ID 21 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 1 :TO-POCKET 1)
+  1.00:   (PREFERRED-OPERATOR :ID 26 :OPERATOR #<DIRECT-MOVE 21>)
+-->
+  SPEW:   0.00:   (UNBLOCK-POCKET-GOAL :ID 27 :OPERATOR #<DIRECT-MOVE 21> :BALL 2 :FROM-POCKET 0 :FROM-PEG 1 :TO-POCKET 1 :TO-PEG 1)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 2.00 = 2.00)
+================================================================================
+LH-EXECUTIVE: 7
+--------------------------------------------------------------------------------
+SUPPRESS-PREFERRENCE
+  1.00:   (PREFERRED-OPERATOR :ID 26 :OPERATOR #<DIRECT-MOVE 21>)
+  1.00:   (PREFERENCE :ID 23 :BETTER-OPERATOR #<DIRECT-MOVE 21> :WORSE-OPERATOR #<DIRECT-MOVE 22>)
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+-->
+  SPEW:   1.00:   (PREFERENCE :ID 23 :BETTER-OPERATOR #<DIRECT-MOVE 21> :WORSE-OPERATOR #<DIRECT-MOVE 22>)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+--------------------------------------------------------------------------------
+SUPPRESS-PREFERRENCE
+  1.00:   (PREFERRED-OPERATOR :ID 26 :OPERATOR #<DIRECT-MOVE 21>)
+  1.00:   (PREFERENCE :ID 24 :BETTER-OPERATOR #<DIRECT-MOVE 22>)
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+-->
+  SPEW:   1.00:   (PREFERENCE :ID 24 :BETTER-OPERATOR #<DIRECT-MOVE 22>)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+--------------------------------------------------------------------------------
+SUPPRESS-PREFERRENCE
+  1.00:   (PREFERRED-OPERATOR :ID 26 :OPERATOR #<DIRECT-MOVE 21>)
+  1.00:   (PREFERENCE :ID 25 :BETTER-OPERATOR #<DIRECT-MOVE 21>)
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+-->
+  SPEW:   1.00:   (PREFERENCE :ID 25 :BETTER-OPERATOR #<DIRECT-MOVE 21>)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+--------------------------------------------------------------------------------
+SUPPRESS-PREFERRED-OPERATOR-MARKER
+  1.00:   (PREFERRED-OPERATOR :ID 26 :OPERATOR #<DIRECT-MOVE 21>)
+  1.00:   (DIRECT-MOVE :ID 21 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 1 :TO-POCKET 1)
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+-->
+  SPEW:   1.00:   (PREFERRED-OPERATOR :ID 26 :OPERATOR #<DIRECT-MOVE 21>)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+================================================================================
+RH-SPATIAL: 4
+--------------------------------------------------------------------------------
+SUPPRESS-UNPREFERRED-OPERATOR
+  1.00:   (PREFERRED-OPERATOR :ID 26 :OPERATOR #<DIRECT-MOVE 21>)
+  1.00:   (DIRECT-MOVE :ID 21 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 1 :TO-POCKET 1)
+  1.00:   (DIRECT-MOVE :ID 22 :STATE #<PUZZLE 20> :BALL 1 :FROM-PEG 1 :FROM-POCKET 1 :TO-PEG 1 :TO-POCKET 0)
+-->
+  SPEW:   1.00:   (DIRECT-MOVE :ID 22 :STATE #<PUZZLE 20> :BALL 1 :FROM-PEG 1 :FROM-POCKET 1 :TO-PEG 1 :TO-POCKET 0)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+--------------------------------------------------------------------------------
+SUPPRESS-PERFORMED-PREFERRED-OPERATOR
+  1.00:   (PREFERRED-OPERATOR :ID 26 :OPERATOR #<DIRECT-MOVE 21>)
+  1.00:   (DIRECT-MOVE :ID 21 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 1 :TO-POCKET 1)
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+-->
+  SPEW:   1.00:   (DIRECT-MOVE :ID 21 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 1 :TO-POCKET 1)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+********************************************************************************
+
+********************************************************************************
+                                MACRO CYCLE: 9
+================================================================================
+RH-SPATIAL: 5
+--------------------------------------------------------------------------------
+PROPOSE-UNBLOCK-POCKET-MOVE
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (UNBLOCK-POCKET-GOAL :ID 27 :OPERATOR #<DIRECT-MOVE 21> :BALL 2 :FROM-POCKET 0 :FROM-PEG 1 :TO-POCKET 1 :TO-PEG 1)
+  1.00:   (BALL :ID 4 :BALL 2)
+  1.00:   (BALL :ID 4 :BALL 2)
+  1.00:   (PEG :ID 5 :PEG 0)
+-->
+  SPEW:   0.00:   (UNBLOCK-POCKET-MOVE :ID 30 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 0 :TO-POCKET 1 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+    With: 1.00
+    Req:  1.00
+    Cont: n/a
+--------------------------------------------------------------------------------
+PROPOSE-UNBLOCK-POCKET-MOVE
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (UNBLOCK-POCKET-GOAL :ID 27 :OPERATOR #<DIRECT-MOVE 21> :BALL 2 :FROM-POCKET 0 :FROM-PEG 1 :TO-POCKET 1 :TO-PEG 1)
+  1.00:   (BALL :ID 4 :BALL 2)
+  1.00:   (BALL :ID 4 :BALL 2)
+  1.00:   (PEG :ID 7 :PEG 2)
+-->
+  SPEW:   0.00:   (UNBLOCK-POCKET-MOVE :ID 29 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 2 :TO-POCKET 0 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+    With: 1.00
+    Req:  1.00
+    Cont: n/a
+--------------------------------------------------------------------------------
+PROPOSE-USE-BUFFER-TO-UNBLOCK-POCKET-MOVE
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (UNBLOCK-POCKET-GOAL :ID 27 :OPERATOR #<DIRECT-MOVE 21> :BALL 2 :FROM-POCKET 0 :FROM-PEG 1 :TO-POCKET 1 :TO-PEG 1)
+  1.00:   (BALL :ID 4 :BALL 2)
+  1.00:   (PEG :ID 7 :PEG 2)
+-->
+  SPEW:   0.00:   (BUFFER-UNBLOCK-POCKET-MOVE :ID 28 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 2 :TO-POCKET 0 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+    With: 1.00
+    Req:  1.00
+    Cont: n/a
+********************************************************************************
+
+********************************************************************************
+                                MACRO CYCLE: 10
+================================================================================
+LH-EXECUTIVE: 8
+--------------------------------------------------------------------------------
+UNARY-PREFERENCE
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (BUFFER-UNBLOCK-POCKET-MOVE :ID 28 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 2 :TO-POCKET 0 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+-->
+  SPEW:   0.00:   (PREFERENCE :ID 33 :BETTER-OPERATOR #<BUFFER-UNBLOCK-POCKET-MOVE 28>)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+--------------------------------------------------------------------------------
+UNARY-PREFERENCE
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (UNBLOCK-POCKET-MOVE :ID 29 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 2 :TO-POCKET 0 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+-->
+  SPEW:   0.00:   (PREFERENCE :ID 32 :BETTER-OPERATOR #<UNBLOCK-POCKET-MOVE 29>)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+--------------------------------------------------------------------------------
+UNARY-PREFERENCE
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (UNBLOCK-POCKET-MOVE :ID 30 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 0 :TO-POCKET 1 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+-->
+  SPEW:   0.00:   (PREFERENCE :ID 31 :BETTER-OPERATOR #<UNBLOCK-POCKET-MOVE 30>)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+********************************************************************************
+
+********************************************************************************
+                                MACRO CYCLE: 11
+================================================================================
+LH-EXECUTIVE: 9
+--------------------------------------------------------------------------------
+SELECT-AMONG-UNARY-PREFERENCES
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (UNBLOCK-POCKET-MOVE :ID 30 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 0 :TO-POCKET 1 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+  1.00:   (PREFERENCE :ID 31 :BETTER-OPERATOR #<UNBLOCK-POCKET-MOVE 30>)
+-->
+  SPEW:   0.00:   (PREFERRED-OPERATOR :ID 34 :OPERATOR #<UNBLOCK-POCKET-MOVE 30>)
+    With: 1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+--------------------------------------------------------------------------------
+SELECT-AMONG-UNARY-PREFERENCES
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (UNBLOCK-POCKET-MOVE :ID 29 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 2 :TO-POCKET 0 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+  1.00:   (PREFERENCE :ID 32 :BETTER-OPERATOR #<UNBLOCK-POCKET-MOVE 29>)
+-->
+  SPEW:   0.00:   (PREFERRED-OPERATOR :ID 36 :OPERATOR #<UNBLOCK-POCKET-MOVE 29>)
+    With: 1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+--------------------------------------------------------------------------------
+SELECT-AMONG-UNARY-PREFERENCES
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (BUFFER-UNBLOCK-POCKET-MOVE :ID 28 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 2 :TO-POCKET 0 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+  1.00:   (PREFERENCE :ID 33 :BETTER-OPERATOR #<BUFFER-UNBLOCK-POCKET-MOVE 28>)
+-->
+  SPEW:   0.00:   (PREFERRED-OPERATOR :ID 37 :OPERATOR #<BUFFER-UNBLOCK-POCKET-MOVE 28>)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+--------------------------------------------------------------------------------
+SUPPRESS-REDUNDANT-SELECTION
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (BUFFER-UNBLOCK-POCKET-MOVE :ID 28 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 2 :TO-POCKET 0 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+  1.00:   (UNBLOCK-POCKET-MOVE :ID 29 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 2 :TO-POCKET 0 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+  1.00:   (PREFERENCE :ID 33 :BETTER-OPERATOR #<BUFFER-UNBLOCK-POCKET-MOVE 28>)
+  1.00:   (PREFERENCE :ID 32 :BETTER-OPERATOR #<UNBLOCK-POCKET-MOVE 29>)
+-->
+  SPEW:   0.00:   (PREFERRED-OPERATOR :ID 36 :OPERATOR #<UNBLOCK-POCKET-MOVE 29>)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+--------------------------------------------------------------------------------
+SUPPRESS-REDUNDANT-SELECTION
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (UNBLOCK-POCKET-MOVE :ID 29 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 2 :TO-POCKET 0 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+  1.00:   (UNBLOCK-POCKET-MOVE :ID 30 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 0 :TO-POCKET 1 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+  1.00:   (PREFERENCE :ID 32 :BETTER-OPERATOR #<UNBLOCK-POCKET-MOVE 29>)
+  1.00:   (PREFERENCE :ID 31 :BETTER-OPERATOR #<UNBLOCK-POCKET-MOVE 30>)
+-->
+  SPEW:   0.00:   (PREFERRED-OPERATOR :ID 34 :OPERATOR #<UNBLOCK-POCKET-MOVE 30>)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+--------------------------------------------------------------------------------
+SUPPRESS-REDUNDANT-SELECTION
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (BUFFER-UNBLOCK-POCKET-MOVE :ID 28 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 2 :TO-POCKET 0 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+  1.00:   (UNBLOCK-POCKET-MOVE :ID 30 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 0 :TO-POCKET 1 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+  1.00:   (PREFERENCE :ID 33 :BETTER-OPERATOR #<BUFFER-UNBLOCK-POCKET-MOVE 28>)
+  1.00:   (PREFERENCE :ID 31 :BETTER-OPERATOR #<UNBLOCK-POCKET-MOVE 30>)
+-->
+  SPEW:   0.00:   (PREFERRED-OPERATOR :ID 34 :OPERATOR #<UNBLOCK-POCKET-MOVE 30>)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+********************************************************************************
+
+********************************************************************************
+                                MACRO CYCLE: 12
+================================================================================
+LH-EXECUTIVE: 10
+--------------------------------------------------------------------------------
+SELECT-AMONG-UNARY-PREFERENCES
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (UNBLOCK-POCKET-MOVE :ID 30 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 0 :TO-POCKET 1 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+  1.00:   (PREFERENCE :ID 31 :BETTER-OPERATOR #<UNBLOCK-POCKET-MOVE 30>)
+-->
+  SPEW:   0.00:   (PREFERRED-OPERATOR :ID 40 :OPERATOR #<UNBLOCK-POCKET-MOVE 30>)
+    With: 1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+--------------------------------------------------------------------------------
+SELECT-AMONG-UNARY-PREFERENCES
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (UNBLOCK-POCKET-MOVE :ID 29 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 2 :TO-POCKET 0 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+  1.00:   (PREFERENCE :ID 32 :BETTER-OPERATOR #<UNBLOCK-POCKET-MOVE 29>)
+-->
+  SPEW:   0.00:   (PREFERRED-OPERATOR :ID 41 :OPERATOR #<UNBLOCK-POCKET-MOVE 29>)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+--------------------------------------------------------------------------------
+SUPPRESS-REDUNDANT-SELECTION
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (UNBLOCK-POCKET-MOVE :ID 29 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 2 :TO-POCKET 0 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+  1.00:   (UNBLOCK-POCKET-MOVE :ID 30 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 0 :TO-POCKET 1 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+  1.00:   (PREFERENCE :ID 32 :BETTER-OPERATOR #<UNBLOCK-POCKET-MOVE 29>)
+  1.00:   (PREFERENCE :ID 31 :BETTER-OPERATOR #<UNBLOCK-POCKET-MOVE 30>)
+-->
+  SPEW:   0.00:   (PREFERRED-OPERATOR :ID 40 :OPERATOR #<UNBLOCK-POCKET-MOVE 30>)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+--------------------------------------------------------------------------------
+SUPPRESS-PREFERRENCE
+  1.00:   (PREFERRED-OPERATOR :ID 37 :OPERATOR #<BUFFER-UNBLOCK-POCKET-MOVE 28>)
+  1.00:   (PREFERENCE :ID 31 :BETTER-OPERATOR #<UNBLOCK-POCKET-MOVE 30>)
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+-->
+  SPEW:   1.00:   (PREFERENCE :ID 31 :BETTER-OPERATOR #<UNBLOCK-POCKET-MOVE 30>)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+--------------------------------------------------------------------------------
+SUPPRESS-PREFERRENCE
+  1.00:   (PREFERRED-OPERATOR :ID 37 :OPERATOR #<BUFFER-UNBLOCK-POCKET-MOVE 28>)
+  1.00:   (PREFERENCE :ID 32 :BETTER-OPERATOR #<UNBLOCK-POCKET-MOVE 29>)
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+-->
+  SPEW:   1.00:   (PREFERENCE :ID 32 :BETTER-OPERATOR #<UNBLOCK-POCKET-MOVE 29>)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+--------------------------------------------------------------------------------
+SUPPRESS-PREFERRENCE
+  1.00:   (PREFERRED-OPERATOR :ID 37 :OPERATOR #<BUFFER-UNBLOCK-POCKET-MOVE 28>)
+  1.00:   (PREFERENCE :ID 33 :BETTER-OPERATOR #<BUFFER-UNBLOCK-POCKET-MOVE 28>)
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+-->
+  SPEW:   1.00:   (PREFERENCE :ID 33 :BETTER-OPERATOR #<BUFFER-UNBLOCK-POCKET-MOVE 28>)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+================================================================================
+RH-SPATIAL: 6
+--------------------------------------------------------------------------------
+SUPPRESS-UNPREFERRED-OPERATOR
+  1.00:   (PREFERRED-OPERATOR :ID 37 :OPERATOR #<BUFFER-UNBLOCK-POCKET-MOVE 28>)
+  1.00:   (BUFFER-UNBLOCK-POCKET-MOVE :ID 28 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 2 :TO-POCKET 0 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+  1.00:   (UNBLOCK-POCKET-MOVE :ID 30 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 0 :TO-POCKET 1 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+-->
+  SPEW:   1.00:   (UNBLOCK-POCKET-MOVE :ID 30 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 0 :TO-POCKET 1 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+    With: -1.00
+    Req:  0.00
+    Cont: n/a
+--------------------------------------------------------------------------------
+SUPPRESS-UNPREFERRED-OPERATOR
+  1.00:   (PREFERRED-OPERATOR :ID 37 :OPERATOR #<BUFFER-UNBLOCK-POCKET-MOVE 28>)
+  1.00:   (BUFFER-UNBLOCK-POCKET-MOVE :ID 28 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 2 :TO-POCKET 0 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+  1.00:   (UNBLOCK-POCKET-MOVE :ID 29 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 2 :TO-POCKET 0 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+-->
+  SPEW:   1.00:   (UNBLOCK-POCKET-MOVE :ID 29 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 2 :TO-POCKET 0 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+    With: -1.00
+    Req:  0.00
+    Cont: n/a
+================================================================================
+LH-SPATIAL: 2
+--------------------------------------------------------------------------------
+PERFORM-MOVE
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (BUFFER-UNBLOCK-POCKET-MOVE :ID 28 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 2 :TO-POCKET 0 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+  1.00:   (PREFERRED-OPERATOR :ID 37 :OPERATOR #<BUFFER-UNBLOCK-POCKET-MOVE 28>)
+-->
+  SPEW:   0.00:   (PUZZLE :ID 43 :CONTENTS #2A((NIL NIL 2) (NIL 1 NIL) (0 NIL NIL)))
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+********************************************************************************
+
+********************************************************************************
+                                MACRO CYCLE: 13
+================================================================================
+LH-EXECUTIVE: 11
+--------------------------------------------------------------------------------
+SUPPRESS-PREFERRED-OPERATOR-MARKER
+  1.00:   (PREFERRED-OPERATOR :ID 37 :OPERATOR #<BUFFER-UNBLOCK-POCKET-MOVE 28>)
+  1.00:   (BUFFER-UNBLOCK-POCKET-MOVE :ID 28 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 2 :TO-POCKET 0 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:   (PUZZLE :ID 43 :CONTENTS #2A((NIL NIL 2) (NIL 1 NIL) (0 NIL NIL)))
+-->
+  SPEW:   1.00:   (PREFERRED-OPERATOR :ID 37 :OPERATOR #<BUFFER-UNBLOCK-POCKET-MOVE 28>)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+--------------------------------------------------------------------------------
+SUPPRESS-ARBITRARILY-CHOSEN-PREFERRED-OPERATOR-MARKER
+  1.00:   (PREFERRED-OPERATOR :ID 41 :OPERATOR #<UNBLOCK-POCKET-MOVE 29>)
+  1.00:   (PREFERRED-OPERATOR :ID 37 :OPERATOR #<BUFFER-UNBLOCK-POCKET-MOVE 28>)
+-->
+  SPEW:   1.00:   (PREFERRED-OPERATOR :ID 37 :OPERATOR #<BUFFER-UNBLOCK-POCKET-MOVE 28>)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+================================================================================
+RH-SPATIAL: 7
+--------------------------------------------------------------------------------
+SUPPRESS-PERFORMED-PREFERRED-OPERATOR
+  1.00:   (PREFERRED-OPERATOR :ID 37 :OPERATOR #<BUFFER-UNBLOCK-POCKET-MOVE 28>)
+  1.00:   (BUFFER-UNBLOCK-POCKET-MOVE :ID 28 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 2 :TO-POCKET 0 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+  1.00:   (PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:   (PUZZLE :ID 43 :CONTENTS #2A((NIL NIL 2) (NIL 1 NIL) (0 NIL NIL)))
+-->
+  SPEW:   1.00:   (BUFFER-UNBLOCK-POCKET-MOVE :ID 28 :STATE #<PUZZLE 20> :BALL 2 :FROM-PEG 1 :FROM-POCKET 0 :TO-PEG 2 :TO-POCKET 0 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+    With: -1.00
+    Req:  0.00
+    Cont: n/a
+--------------------------------------------------------------------------------
+PROPOSE-UNBLOCK-POCKET-MOVE
+  1.00:   (PUZZLE :ID 43 :CONTENTS #2A((NIL NIL 2) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (UNBLOCK-POCKET-GOAL :ID 27 :OPERATOR #<DIRECT-MOVE 21> :BALL 2 :FROM-POCKET 0 :FROM-PEG 1 :TO-POCKET 1 :TO-PEG 1)
+  1.00:   (BALL :ID 3 :BALL 1)
+  1.00:   (BALL :ID 4 :BALL 2)
+  1.00:   (PEG :ID 5 :PEG 0)
+-->
+  SPEW:   0.00:   (UNBLOCK-POCKET-MOVE :ID 44 :STATE #<PUZZLE 43> :BALL 1 :FROM-PEG 1 :FROM-POCKET 1 :TO-PEG 0 :TO-POCKET 1 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+    With: 1.00
+    Req:  1.00
+    Cont: n/a
+********************************************************************************
+
+********************************************************************************
+                                MACRO CYCLE: 14
+================================================================================
+LH-EXECUTIVE: 12
+--------------------------------------------------------------------------------
+UNARY-PREFERENCE
+  1.00:   (PUZZLE :ID 43 :CONTENTS #2A((NIL NIL 2) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (UNBLOCK-POCKET-MOVE :ID 44 :STATE #<PUZZLE 43> :BALL 1 :FROM-PEG 1 :FROM-POCKET 1 :TO-PEG 0 :TO-POCKET 1 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+-->
+  SPEW:   0.00:   (PREFERENCE :ID 45 :BETTER-OPERATOR #<UNBLOCK-POCKET-MOVE 44>)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+********************************************************************************
+
+********************************************************************************
+                                MACRO CYCLE: 15
+================================================================================
+LH-EXECUTIVE: 13
+--------------------------------------------------------------------------------
+SELECT-AMONG-UNARY-PREFERENCES
+  1.00:   (PUZZLE :ID 43 :CONTENTS #2A((NIL NIL 2) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (UNBLOCK-POCKET-MOVE :ID 44 :STATE #<PUZZLE 43> :BALL 1 :FROM-PEG 1 :FROM-POCKET 1 :TO-PEG 0 :TO-POCKET 1 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+  1.00:   (PREFERENCE :ID 45 :BETTER-OPERATOR #<UNBLOCK-POCKET-MOVE 44>)
+-->
+  SPEW:   0.00:   (PREFERRED-OPERATOR :ID 46 :OPERATOR #<UNBLOCK-POCKET-MOVE 44>)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+********************************************************************************
+
+********************************************************************************
+                                MACRO CYCLE: 16
+================================================================================
+LH-EXECUTIVE: 14
+--------------------------------------------------------------------------------
+SUPPRESS-PREFERRENCE
+  1.00:   (PREFERRED-OPERATOR :ID 46 :OPERATOR #<UNBLOCK-POCKET-MOVE 44>)
+  1.00:   (PREFERENCE :ID 45 :BETTER-OPERATOR #<UNBLOCK-POCKET-MOVE 44>)
+  1.00:   (PUZZLE :ID 43 :CONTENTS #2A((NIL NIL 2) (NIL 1 NIL) (0 NIL NIL)))
+-->
+  SPEW:   1.00:   (PREFERENCE :ID 45 :BETTER-OPERATOR #<UNBLOCK-POCKET-MOVE 44>)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+--------------------------------------------------------------------------------
+SUPPRESS-ARBITRARILY-CHOSEN-PREFERRED-OPERATOR-MARKER
+  1.00:   (PREFERRED-OPERATOR :ID 46 :OPERATOR #<UNBLOCK-POCKET-MOVE 44>)
+  1.00:   (PREFERRED-OPERATOR :ID 41 :OPERATOR #<UNBLOCK-POCKET-MOVE 29>)
+-->
+  SPEW:   1.00:   (PREFERRED-OPERATOR :ID 41 :OPERATOR #<UNBLOCK-POCKET-MOVE 29>)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+================================================================================
+LH-SPATIAL: 3
+--------------------------------------------------------------------------------
+PERFORM-MOVE
+  1.00:   (PUZZLE :ID 43 :CONTENTS #2A((NIL NIL 2) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (UNBLOCK-POCKET-MOVE :ID 44 :STATE #<PUZZLE 43> :BALL 1 :FROM-PEG 1 :FROM-POCKET 1 :TO-PEG 0 :TO-POCKET 1 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+  1.00:   (PREFERRED-OPERATOR :ID 46 :OPERATOR #<UNBLOCK-POCKET-MOVE 44>)
+-->
+  SPEW:   0.00:   (PUZZLE :ID 47 :CONTENTS #2A((NIL NIL 2) (1 NIL NIL) (0 NIL NIL)))
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+********************************************************************************
+
+********************************************************************************
+                                MACRO CYCLE: 17
+================================================================================
+RH-EXECUTIVE: 2
+--------------------------------------------------------------------------------
+SUPPRESS-SATISFIED-GOAL
+  1.00:   (UNBLOCK-POCKET-GOAL :ID 27 :OPERATOR #<DIRECT-MOVE 21> :BALL 2 :FROM-POCKET 0 :FROM-PEG 1 :TO-POCKET 1 :TO-PEG 1)
+  1.00:   (PUZZLE :ID 47 :CONTENTS #2A((NIL NIL 2) (1 NIL NIL) (0 NIL NIL)))
+-->
+  SPEW:   1.00:   (UNBLOCK-POCKET-GOAL :ID 27 :OPERATOR #<DIRECT-MOVE 21> :BALL 2 :FROM-POCKET 0 :FROM-PEG 1 :TO-POCKET 1 :TO-PEG 1)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 2.00 = 0.00)
+================================================================================
+LH-EXECUTIVE: 15
+--------------------------------------------------------------------------------
+SUPPRESS-PREFERRED-OPERATOR-MARKER
+  1.00:   (PREFERRED-OPERATOR :ID 46 :OPERATOR #<UNBLOCK-POCKET-MOVE 44>)
+  1.00:   (UNBLOCK-POCKET-MOVE :ID 44 :STATE #<PUZZLE 43> :BALL 1 :FROM-PEG 1 :FROM-POCKET 1 :TO-PEG 0 :TO-POCKET 1 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+  1.00:   (PUZZLE :ID 43 :CONTENTS #2A((NIL NIL 2) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:   (PUZZLE :ID 47 :CONTENTS #2A((NIL NIL 2) (1 NIL NIL) (0 NIL NIL)))
+-->
+  SPEW:   1.00:   (PREFERRED-OPERATOR :ID 46 :OPERATOR #<UNBLOCK-POCKET-MOVE 44>)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+================================================================================
+RH-SPATIAL: 8
+--------------------------------------------------------------------------------
+SUPPRESS-PERFORMED-PREFERRED-OPERATOR
+  1.00:   (PREFERRED-OPERATOR :ID 46 :OPERATOR #<UNBLOCK-POCKET-MOVE 44>)
+  1.00:   (UNBLOCK-POCKET-MOVE :ID 44 :STATE #<PUZZLE 43> :BALL 1 :FROM-PEG 1 :FROM-POCKET 1 :TO-PEG 0 :TO-POCKET 1 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+  1.00:   (PUZZLE :ID 43 :CONTENTS #2A((NIL NIL 2) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:   (PUZZLE :ID 47 :CONTENTS #2A((NIL NIL 2) (1 NIL NIL) (0 NIL NIL)))
+-->
+  SPEW:   1.00:   (UNBLOCK-POCKET-MOVE :ID 44 :STATE #<PUZZLE 43> :BALL 1 :FROM-PEG 1 :FROM-POCKET 1 :TO-PEG 0 :TO-POCKET 1 :GOAL #<UNBLOCK-POCKET-GOAL 27>)
+    With: -1.00
+    Req:  0.00
+    Cont: n/a
+********************************************************************************
+
+********************************************************************************
+                                MACRO CYCLE: 18
+================================================================================
+RH-SPATIAL: 9
+--------------------------------------------------------------------------------
+PROPOSE-MOVE
+  1.00:   (SOLVE-PUZZLE-GOAL :ID 1)
+  1.00:   (PUZZLE :ID 47 :CONTENTS #2A((NIL NIL 2) (1 NIL NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (BALL :ID 3 :BALL 1)
+-->
+  SPEW:   0.00:   (DIRECT-MOVE :ID 49 :STATE #<PUZZLE 47> :BALL 1 :FROM-PEG 0 :FROM-POCKET 1 :TO-PEG 1 :TO-POCKET 0)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+--------------------------------------------------------------------------------
+PROPOSE-MOVE
+  1.00:   (SOLVE-PUZZLE-GOAL :ID 1)
+  1.00:   (PUZZLE :ID 47 :CONTENTS #2A((NIL NIL 2) (1 NIL NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (BALL :ID 4 :BALL 2)
+-->
+  SPEW:   0.00:   (DIRECT-MOVE :ID 48 :STATE #<PUZZLE 47> :BALL 2 :FROM-PEG 2 :FROM-POCKET 0 :TO-PEG 1 :TO-POCKET 1)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+********************************************************************************
+
+********************************************************************************
+                                MACRO CYCLE: 19
+================================================================================
+LH-EXECUTIVE: 16
+--------------------------------------------------------------------------------
+UNARY-PREFERENCE
+  1.00:   (PUZZLE :ID 47 :CONTENTS #2A((NIL NIL 2) (1 NIL NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (DIRECT-MOVE :ID 48 :STATE #<PUZZLE 47> :BALL 2 :FROM-PEG 2 :FROM-POCKET 0 :TO-PEG 1 :TO-POCKET 1)
+-->
+  SPEW:   0.00:   (PREFERENCE :ID 52 :BETTER-OPERATOR #<DIRECT-MOVE 48>)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+--------------------------------------------------------------------------------
+UNARY-PREFERENCE
+  1.00:   (PUZZLE :ID 47 :CONTENTS #2A((NIL NIL 2) (1 NIL NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (DIRECT-MOVE :ID 49 :STATE #<PUZZLE 47> :BALL 1 :FROM-PEG 0 :FROM-POCKET 1 :TO-PEG 1 :TO-POCKET 0)
+-->
+  SPEW:   0.00:   (PREFERENCE :ID 51 :BETTER-OPERATOR #<DIRECT-MOVE 49>)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+--------------------------------------------------------------------------------
+BINARY-PREFERENCE
+  1.00:   (PUZZLE :ID 47 :CONTENTS #2A((NIL NIL 2) (1 NIL NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (DIRECT-MOVE :ID 48 :STATE #<PUZZLE 47> :BALL 2 :FROM-PEG 2 :FROM-POCKET 0 :TO-PEG 1 :TO-POCKET 1)
+  1.00:   (DIRECT-MOVE :ID 49 :STATE #<PUZZLE 47> :BALL 1 :FROM-PEG 0 :FROM-POCKET 1 :TO-PEG 1 :TO-POCKET 0)
+-->
+  SPEW:   0.00:   (PREFERENCE :ID 50 :BETTER-OPERATOR #<DIRECT-MOVE 48> :WORSE-OPERATOR #<DIRECT-MOVE 49>)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+********************************************************************************
+
+********************************************************************************
+                                MACRO CYCLE: 20
+================================================================================
+LH-EXECUTIVE: 17
+--------------------------------------------------------------------------------
+SELECT-AMONG-UNARY-PREFERENCES
+  1.00:   (PUZZLE :ID 47 :CONTENTS #2A((NIL NIL 2) (1 NIL NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (DIRECT-MOVE :ID 48 :STATE #<PUZZLE 47> :BALL 2 :FROM-PEG 2 :FROM-POCKET 0 :TO-PEG 1 :TO-POCKET 1)
+  1.00:   (PREFERENCE :ID 52 :BETTER-OPERATOR #<DIRECT-MOVE 48>)
+-->
+  SPEW:   0.00:   (PREFERRED-OPERATOR :ID 53 :OPERATOR #<DIRECT-MOVE 48>)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+********************************************************************************
+
+********************************************************************************
+                                MACRO CYCLE: 21
+================================================================================
+LH-EXECUTIVE: 18
+--------------------------------------------------------------------------------
+SUPPRESS-PREFERRENCE
+  1.00:   (PREFERRED-OPERATOR :ID 53 :OPERATOR #<DIRECT-MOVE 48>)
+  1.00:   (PREFERENCE :ID 50 :BETTER-OPERATOR #<DIRECT-MOVE 48> :WORSE-OPERATOR #<DIRECT-MOVE 49>)
+  1.00:   (PUZZLE :ID 47 :CONTENTS #2A((NIL NIL 2) (1 NIL NIL) (0 NIL NIL)))
+-->
+  SPEW:   1.00:   (PREFERENCE :ID 50 :BETTER-OPERATOR #<DIRECT-MOVE 48> :WORSE-OPERATOR #<DIRECT-MOVE 49>)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+--------------------------------------------------------------------------------
+SUPPRESS-PREFERRENCE
+  1.00:   (PREFERRED-OPERATOR :ID 53 :OPERATOR #<DIRECT-MOVE 48>)
+  1.00:   (PREFERENCE :ID 51 :BETTER-OPERATOR #<DIRECT-MOVE 49>)
+  1.00:   (PUZZLE :ID 47 :CONTENTS #2A((NIL NIL 2) (1 NIL NIL) (0 NIL NIL)))
+-->
+  SPEW:   1.00:   (PREFERENCE :ID 51 :BETTER-OPERATOR #<DIRECT-MOVE 49>)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+--------------------------------------------------------------------------------
+SUPPRESS-PREFERRENCE
+  1.00:   (PREFERRED-OPERATOR :ID 53 :OPERATOR #<DIRECT-MOVE 48>)
+  1.00:   (PREFERENCE :ID 52 :BETTER-OPERATOR #<DIRECT-MOVE 48>)
+  1.00:   (PUZZLE :ID 47 :CONTENTS #2A((NIL NIL 2) (1 NIL NIL) (0 NIL NIL)))
+-->
+  SPEW:   1.00:   (PREFERENCE :ID 52 :BETTER-OPERATOR #<DIRECT-MOVE 48>)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+================================================================================
+RH-SPATIAL: 10
+--------------------------------------------------------------------------------
+SUPPRESS-UNPREFERRED-OPERATOR
+  1.00:   (PREFERRED-OPERATOR :ID 53 :OPERATOR #<DIRECT-MOVE 48>)
+  1.00:   (DIRECT-MOVE :ID 48 :STATE #<PUZZLE 47> :BALL 2 :FROM-PEG 2 :FROM-POCKET 0 :TO-PEG 1 :TO-POCKET 1)
+  1.00:   (DIRECT-MOVE :ID 49 :STATE #<PUZZLE 47> :BALL 1 :FROM-PEG 0 :FROM-POCKET 1 :TO-PEG 1 :TO-POCKET 0)
+-->
+  SPEW:   1.00:   (DIRECT-MOVE :ID 49 :STATE #<PUZZLE 47> :BALL 1 :FROM-PEG 0 :FROM-POCKET 1 :TO-PEG 1 :TO-POCKET 0)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+================================================================================
+LH-SPATIAL: 4
+--------------------------------------------------------------------------------
+PERFORM-MOVE
+  1.00:   (PUZZLE :ID 47 :CONTENTS #2A((NIL NIL 2) (1 NIL NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (DIRECT-MOVE :ID 48 :STATE #<PUZZLE 47> :BALL 2 :FROM-PEG 2 :FROM-POCKET 0 :TO-PEG 1 :TO-POCKET 1)
+  1.00:   (PREFERRED-OPERATOR :ID 53 :OPERATOR #<DIRECT-MOVE 48>)
+-->
+  SPEW:   0.00:   (PUZZLE :ID 54 :CONTENTS #2A((NIL NIL NIL) (1 2 NIL) (0 NIL NIL)))
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+********************************************************************************
+
+********************************************************************************
+                                MACRO CYCLE: 22
+================================================================================
+LH-EXECUTIVE: 19
+--------------------------------------------------------------------------------
+SUPPRESS-PREFERRED-OPERATOR-MARKER
+  1.00:   (PREFERRED-OPERATOR :ID 53 :OPERATOR #<DIRECT-MOVE 48>)
+  1.00:   (DIRECT-MOVE :ID 48 :STATE #<PUZZLE 47> :BALL 2 :FROM-PEG 2 :FROM-POCKET 0 :TO-PEG 1 :TO-POCKET 1)
+  1.00:   (PUZZLE :ID 47 :CONTENTS #2A((NIL NIL 2) (1 NIL NIL) (0 NIL NIL)))
+  1.00:   (PUZZLE :ID 54 :CONTENTS #2A((NIL NIL NIL) (1 2 NIL) (0 NIL NIL)))
+-->
+  SPEW:   1.00:   (PREFERRED-OPERATOR :ID 53 :OPERATOR #<DIRECT-MOVE 48>)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+================================================================================
+RH-SPATIAL: 11
+--------------------------------------------------------------------------------
+SUPPRESS-PERFORMED-PREFERRED-OPERATOR
+  1.00:   (PREFERRED-OPERATOR :ID 53 :OPERATOR #<DIRECT-MOVE 48>)
+  1.00:   (DIRECT-MOVE :ID 48 :STATE #<PUZZLE 47> :BALL 2 :FROM-PEG 2 :FROM-POCKET 0 :TO-PEG 1 :TO-POCKET 1)
+  1.00:   (PUZZLE :ID 47 :CONTENTS #2A((NIL NIL 2) (1 NIL NIL) (0 NIL NIL)))
+  1.00:   (PUZZLE :ID 54 :CONTENTS #2A((NIL NIL NIL) (1 2 NIL) (0 NIL NIL)))
+-->
+  SPEW:   1.00:   (DIRECT-MOVE :ID 48 :STATE #<PUZZLE 47> :BALL 2 :FROM-PEG 2 :FROM-POCKET 0 :TO-PEG 1 :TO-POCKET 1)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+--------------------------------------------------------------------------------
+PROPOSE-MOVE
+  1.00:   (SOLVE-PUZZLE-GOAL :ID 1)
+  1.00:   (PUZZLE :ID 54 :CONTENTS #2A((NIL NIL NIL) (1 2 NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (BALL :ID 3 :BALL 1)
+-->
+  SPEW:   0.00:   (DIRECT-MOVE :ID 55 :STATE #<PUZZLE 54> :BALL 1 :FROM-PEG 0 :FROM-POCKET 1 :TO-PEG 1 :TO-POCKET 0)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+********************************************************************************
+
+********************************************************************************
+                                MACRO CYCLE: 23
+================================================================================
+LH-EXECUTIVE: 20
+--------------------------------------------------------------------------------
+UNARY-PREFERENCE
+  1.00:   (PUZZLE :ID 54 :CONTENTS #2A((NIL NIL NIL) (1 2 NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (DIRECT-MOVE :ID 55 :STATE #<PUZZLE 54> :BALL 1 :FROM-PEG 0 :FROM-POCKET 1 :TO-PEG 1 :TO-POCKET 0)
+-->
+  SPEW:   0.00:   (PREFERENCE :ID 56 :BETTER-OPERATOR #<DIRECT-MOVE 55>)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+********************************************************************************
+
+********************************************************************************
+                                MACRO CYCLE: 24
+================================================================================
+LH-EXECUTIVE: 21
+--------------------------------------------------------------------------------
+SELECT-AMONG-UNARY-PREFERENCES
+  1.00:   (PUZZLE :ID 54 :CONTENTS #2A((NIL NIL NIL) (1 2 NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (DIRECT-MOVE :ID 55 :STATE #<PUZZLE 54> :BALL 1 :FROM-PEG 0 :FROM-POCKET 1 :TO-PEG 1 :TO-POCKET 0)
+  1.00:   (PREFERENCE :ID 56 :BETTER-OPERATOR #<DIRECT-MOVE 55>)
+-->
+  SPEW:   0.00:   (PREFERRED-OPERATOR :ID 57 :OPERATOR #<DIRECT-MOVE 55>)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+********************************************************************************
+
+********************************************************************************
+                                MACRO CYCLE: 25
+================================================================================
+LH-EXECUTIVE: 22
+--------------------------------------------------------------------------------
+SUPPRESS-PREFERRENCE
+  1.00:   (PREFERRED-OPERATOR :ID 57 :OPERATOR #<DIRECT-MOVE 55>)
+  1.00:   (PREFERENCE :ID 56 :BETTER-OPERATOR #<DIRECT-MOVE 55>)
+  1.00:   (PUZZLE :ID 54 :CONTENTS #2A((NIL NIL NIL) (1 2 NIL) (0 NIL NIL)))
+-->
+  SPEW:   1.00:   (PREFERENCE :ID 56 :BETTER-OPERATOR #<DIRECT-MOVE 55>)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+================================================================================
+LH-SPATIAL: 5
+--------------------------------------------------------------------------------
+PERFORM-MOVE
+  1.00:   (PUZZLE :ID 54 :CONTENTS #2A((NIL NIL NIL) (1 2 NIL) (0 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:   (DIRECT-MOVE :ID 55 :STATE #<PUZZLE 54> :BALL 1 :FROM-PEG 0 :FROM-POCKET 1 :TO-PEG 1 :TO-POCKET 0)
+  1.00:   (PREFERRED-OPERATOR :ID 57 :OPERATOR #<DIRECT-MOVE 55>)
+-->
+  SPEW:   0.00:   (PUZZLE :ID 58 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+********************************************************************************
+
+********************************************************************************
+                                MACRO CYCLE: 26
+================================================================================
+LH-EXECUTIVE: 23
+--------------------------------------------------------------------------------
+SUPPRESS-PREFERRED-OPERATOR-MARKER
+  1.00:   (PREFERRED-OPERATOR :ID 57 :OPERATOR #<DIRECT-MOVE 55>)
+  1.00:   (DIRECT-MOVE :ID 55 :STATE #<PUZZLE 54> :BALL 1 :FROM-PEG 0 :FROM-POCKET 1 :TO-PEG 1 :TO-POCKET 0)
+  1.00:   (PUZZLE :ID 54 :CONTENTS #2A((NIL NIL NIL) (1 2 NIL) (0 NIL NIL)))
+  1.00:   (PUZZLE :ID 58 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+-->
+  SPEW:   1.00:   (PREFERRED-OPERATOR :ID 57 :OPERATOR #<DIRECT-MOVE 55>)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+================================================================================
+RH-SPATIAL: 12
+--------------------------------------------------------------------------------
+SUPPRESS-PERFORMED-PREFERRED-OPERATOR
+  1.00:   (PREFERRED-OPERATOR :ID 57 :OPERATOR #<DIRECT-MOVE 55>)
+  1.00:   (DIRECT-MOVE :ID 55 :STATE #<PUZZLE 54> :BALL 1 :FROM-PEG 0 :FROM-POCKET 1 :TO-PEG 1 :TO-POCKET 0)
+  1.00:   (PUZZLE :ID 54 :CONTENTS #2A((NIL NIL NIL) (1 2 NIL) (0 NIL NIL)))
+  1.00:   (PUZZLE :ID 58 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+-->
+  SPEW:   1.00:   (DIRECT-MOVE :ID 55 :STATE #<PUZZLE 54> :BALL 1 :FROM-PEG 0 :FROM-POCKET 1 :TO-PEG 1 :TO-POCKET 0)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+********************************************************************************
+================================================================================
+all centers
+--------------------------------------------------------------------------------
+  1.00:	(SOLVE-PUZZLE-GOAL :ID 1)
+  1.00:	(BALL :ID 2 :BALL 0)
+  1.00:	(BALL :ID 3 :BALL 1)
+  1.00:	(BALL :ID 4 :BALL 2)
+  1.00:	(PEG :ID 5 :PEG 0)
+  1.00:	(PEG :ID 6 :PEG 1)
+  1.00:	(PEG :ID 7 :PEG 2)
+  1.00:	(PUZZLE :ID 8 :CONTENTS #2A((NIL 2 0) (NIL 1 NIL) (NIL NIL NIL)))
+  1.00:	(END-PUZZLE :ID 9 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+  1.00:	(PUZZLE :ID 20 :CONTENTS #2A((NIL 2 NIL) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:	(PUZZLE :ID 43 :CONTENTS #2A((NIL NIL 2) (NIL 1 NIL) (0 NIL NIL)))
+  1.00:	(PUZZLE :ID 47 :CONTENTS #2A((NIL NIL 2) (1 NIL NIL) (0 NIL NIL)))
+  1.00:	(PUZZLE :ID 54 :CONTENTS #2A((NIL NIL NIL) (1 2 NIL) (0 NIL NIL)))
+  1.00:	(PUZZLE :ID 58 :CONTENTS #2A((NIL 1 NIL) (NIL 2 NIL) (0 NIL NIL)))
+================================================================================

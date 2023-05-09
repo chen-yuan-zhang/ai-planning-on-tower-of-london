@@ -1,0 +1,123 @@
+
+********************************************************************************
+                                MACRO CYCLE: 1
+================================================================================
+RH-SPATIAL: 1
+--------------------------------------------------------------------------------
+PROPOSE-MOVE
+  1.00:   (SOLVE-PUZZLE-GOAL :ID 1)
+  1.00:   (PUZZLE :ID 8 :CONTENTS #2A((NIL NIL NIL) (2 0 NIL) (1 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL NIL 0) (2 NIL NIL) (1 NIL NIL)))
+  1.00:   (BALL :ID 2 :BALL 0)
+-->
+  SPEW:   0.00:   (DIRECT-MOVE :ID 10 :STATE #<PUZZLE 8> :BALL 0 :FROM-PEG 1 :FROM-POCKET 1 :TO-PEG 2 :TO-POCKET 0)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+********************************************************************************
+
+********************************************************************************
+                                MACRO CYCLE: 2
+================================================================================
+LH-EXECUTIVE: 1
+--------------------------------------------------------------------------------
+UNARY-PREFERENCE
+  1.00:   (PUZZLE :ID 8 :CONTENTS #2A((NIL NIL NIL) (2 0 NIL) (1 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL NIL 0) (2 NIL NIL) (1 NIL NIL)))
+  1.00:   (DIRECT-MOVE :ID 10 :STATE #<PUZZLE 8> :BALL 0 :FROM-PEG 1 :FROM-POCKET 1 :TO-PEG 2 :TO-POCKET 0)
+-->
+  SPEW:   0.00:   (PREFERENCE :ID 11 :BETTER-OPERATOR #<DIRECT-MOVE 10>)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+********************************************************************************
+
+********************************************************************************
+                                MACRO CYCLE: 3
+================================================================================
+LH-EXECUTIVE: 2
+--------------------------------------------------------------------------------
+SELECT-AMONG-UNARY-PREFERENCES
+  1.00:   (PUZZLE :ID 8 :CONTENTS #2A((NIL NIL NIL) (2 0 NIL) (1 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL NIL 0) (2 NIL NIL) (1 NIL NIL)))
+  1.00:   (DIRECT-MOVE :ID 10 :STATE #<PUZZLE 8> :BALL 0 :FROM-PEG 1 :FROM-POCKET 1 :TO-PEG 2 :TO-POCKET 0)
+  1.00:   (PREFERENCE :ID 11 :BETTER-OPERATOR #<DIRECT-MOVE 10>)
+-->
+  SPEW:   0.00:   (PREFERRED-OPERATOR :ID 12 :OPERATOR #<DIRECT-MOVE 10>)
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+********************************************************************************
+
+********************************************************************************
+                                MACRO CYCLE: 4
+================================================================================
+LH-EXECUTIVE: 3
+--------------------------------------------------------------------------------
+SUPPRESS-PREFERRENCE
+  1.00:   (PREFERRED-OPERATOR :ID 12 :OPERATOR #<DIRECT-MOVE 10>)
+  1.00:   (PREFERENCE :ID 11 :BETTER-OPERATOR #<DIRECT-MOVE 10>)
+  1.00:   (PUZZLE :ID 8 :CONTENTS #2A((NIL NIL NIL) (2 0 NIL) (1 NIL NIL)))
+-->
+  SPEW:   1.00:   (PREFERENCE :ID 11 :BETTER-OPERATOR #<DIRECT-MOVE 10>)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+================================================================================
+LH-SPATIAL: 1
+--------------------------------------------------------------------------------
+PERFORM-MOVE
+  1.00:   (PUZZLE :ID 8 :CONTENTS #2A((NIL NIL NIL) (2 0 NIL) (1 NIL NIL)))
+  1.00:   (END-PUZZLE :ID 9 :CONTENTS #2A((NIL NIL 0) (2 NIL NIL) (1 NIL NIL)))
+  1.00:   (DIRECT-MOVE :ID 10 :STATE #<PUZZLE 8> :BALL 0 :FROM-PEG 1 :FROM-POCKET 1 :TO-PEG 2 :TO-POCKET 0)
+  1.00:   (PREFERRED-OPERATOR :ID 12 :OPERATOR #<DIRECT-MOVE 10>)
+-->
+  SPEW:   0.00:   (PUZZLE :ID 13 :CONTENTS #2A((NIL NIL 0) (2 NIL NIL) (1 NIL NIL)))
+    With: 1.00
+    Req:  1.00
+    Cont: 1.00 (* 1.00 = 1.00)
+********************************************************************************
+
+********************************************************************************
+                                MACRO CYCLE: 5
+================================================================================
+LH-EXECUTIVE: 4
+--------------------------------------------------------------------------------
+SUPPRESS-PREFERRED-OPERATOR-MARKER
+  1.00:   (PREFERRED-OPERATOR :ID 12 :OPERATOR #<DIRECT-MOVE 10>)
+  1.00:   (DIRECT-MOVE :ID 10 :STATE #<PUZZLE 8> :BALL 0 :FROM-PEG 1 :FROM-POCKET 1 :TO-PEG 2 :TO-POCKET 0)
+  1.00:   (PUZZLE :ID 8 :CONTENTS #2A((NIL NIL NIL) (2 0 NIL) (1 NIL NIL)))
+  1.00:   (PUZZLE :ID 13 :CONTENTS #2A((NIL NIL 0) (2 NIL NIL) (1 NIL NIL)))
+-->
+  SPEW:   1.00:   (PREFERRED-OPERATOR :ID 12 :OPERATOR #<DIRECT-MOVE 10>)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+================================================================================
+RH-SPATIAL: 2
+--------------------------------------------------------------------------------
+SUPPRESS-PERFORMED-PREFERRED-OPERATOR
+  1.00:   (PREFERRED-OPERATOR :ID 12 :OPERATOR #<DIRECT-MOVE 10>)
+  1.00:   (DIRECT-MOVE :ID 10 :STATE #<PUZZLE 8> :BALL 0 :FROM-PEG 1 :FROM-POCKET 1 :TO-PEG 2 :TO-POCKET 0)
+  1.00:   (PUZZLE :ID 8 :CONTENTS #2A((NIL NIL NIL) (2 0 NIL) (1 NIL NIL)))
+  1.00:   (PUZZLE :ID 13 :CONTENTS #2A((NIL NIL 0) (2 NIL NIL) (1 NIL NIL)))
+-->
+  SPEW:   1.00:   (DIRECT-MOVE :ID 10 :STATE #<PUZZLE 8> :BALL 0 :FROM-PEG 1 :FROM-POCKET 1 :TO-PEG 2 :TO-POCKET 0)
+    With: -1.00
+    Req:  0.00
+    Cont: 0.00 (* 1.00 = 0.00)
+********************************************************************************
+================================================================================
+all centers
+--------------------------------------------------------------------------------
+  1.00:	(SOLVE-PUZZLE-GOAL :ID 1)
+  1.00:	(BALL :ID 2 :BALL 0)
+  1.00:	(BALL :ID 3 :BALL 1)
+  1.00:	(BALL :ID 4 :BALL 2)
+  1.00:	(PEG :ID 5 :PEG 0)
+  1.00:	(PEG :ID 6 :PEG 1)
+  1.00:	(PEG :ID 7 :PEG 2)
+  1.00:	(PUZZLE :ID 8 :CONTENTS #2A((NIL NIL NIL) (2 0 NIL) (1 NIL NIL)))
+  1.00:	(END-PUZZLE :ID 9 :CONTENTS #2A((NIL NIL 0) (2 NIL NIL) (1 NIL NIL)))
+  1.00:	(PUZZLE :ID 13 :CONTENTS #2A((NIL NIL 0) (2 NIL NIL) (1 NIL NIL)))
+================================================================================
