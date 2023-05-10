@@ -1,7 +1,7 @@
 import math, sys
 
 from tarski.io import PDDLReader
-sys.path.append('/home/student.unimelb.edu.au/chenyuanz/py_projects/planner_pddl/src')
+sys.path.append('src')
 
 from heuristic_functions import LAPKTarski, Planner
 from problem import create_search_problem, SearchProblem, ProblemEnvironment
@@ -39,54 +39,54 @@ def main():
         lw.groundedTarski(planner, problem)
         planner.setup()
 
-        # """BFS"""
-        # bfs = BFS(repeat_check=False)
-        # result = bfs.search_full_sol(searchProblem)
-        #
-        # succ_dict = {}
-        # for info in result['nodes_info']:
-        #     if (info[-1]):
-        #         succ_dict[str(info[-1].state)] = succ_dict.get(str(info[-1].state), 0) + 1
-        #
-        # info_dict['optimal_cost'] = result['nodes_info'][0][2]
-        # info_dict['action_count(BFS)'] = succ_dict
-        # info_dict['time(BFS)'] = result['time']
-        #
-        # """ASTAR"""
-        # astar= AStarSearch(heuristic_function=partial(gc_heuristic, planner=planner, lw=lw), repeat_check=False)
-        # result = astar.search_full_sol(searchProblem)
-        #
-        # succ_dict = {}
-        # for info in result['nodes_info']:
-        #     if (info[-1]):
-        #         succ_dict[str(info[-1].state)] = succ_dict.get(str(info[-1].state), 0) + 1
-        #
-        # info_dict['action_count(ASTAR)'] = succ_dict
-        # info_dict['time(ASTAR)'] = result['time']
-        #
-        # """GBFS"""
-        # gbfs = BestFirstSearch(heuristic_function=partial(gc_heuristic, planner=planner, lw=lw), repeat_check=True)
-        # result = gbfs.search(searchProblem)
-        #
-        # if result['node_info'][3]:
-        #     info_dict['action_count(GBFS)'] = {str(result['node_info'][3].state): 1}
-        # else:
-        #     info_dict['action_count(GBFS)'] = None
-        #
-        # info_dict['time(GBFS)'] = result['time']
+        """BFS"""
+        bfs = BFS(repeat_check=False)
+        result = bfs.search_full_sol(searchProblem)
 
-        # """LH"""
-        # for i in range(1,8):
-        #     lh= FixedDepthLookaheadPlanner(stop_depth = i, heuristic_function=partial(gc_heuristic, planner=planner, lw=lw), repeat_check=False)
-        #     result = lh.search_full_sol(searchProblem)
-        #
-        #     succ_dict = {}
-        #     for info in result['nodes_info']:
-        #         if (info[-1]):
-        #             succ_dict[str(info[-1].state)] = succ_dict.get(str(info[-1].state), 0) + 1
-        #
-        #     info_dict['action_count(LH' + str(i) + ')'] = succ_dict
-        #     info_dict['time(LH' + str(i) + ')'] = result['time']
+        succ_dict = {}
+        for info in result['nodes_info']:
+            if (info[-1]):
+                succ_dict[str(info[-1].state)] = succ_dict.get(str(info[-1].state), 0) + 1
+
+        info_dict['optimal_cost'] = result['nodes_info'][0][2]
+        info_dict['action_count(BFS)'] = succ_dict
+        info_dict['time(BFS)'] = result['time']
+
+        """ASTAR"""
+        astar= AStarSearch(heuristic_function=partial(gc_heuristic, planner=planner, lw=lw), repeat_check=False)
+        result = astar.search_full_sol(searchProblem)
+
+        succ_dict = {}
+        for info in result['nodes_info']:
+            if (info[-1]):
+                succ_dict[str(info[-1].state)] = succ_dict.get(str(info[-1].state), 0) + 1
+
+        info_dict['action_count(ASTAR)'] = succ_dict
+        info_dict['time(ASTAR)'] = result['time']
+
+        """GBFS"""
+        gbfs = BestFirstSearch(heuristic_function=partial(gc_heuristic, planner=planner, lw=lw), repeat_check=True)
+        result = gbfs.search(searchProblem)
+
+        if result['node_info'][3]:
+            info_dict['action_count(GBFS)'] = {str(result['node_info'][3].state): 1}
+        else:
+            info_dict['action_count(GBFS)'] = None
+
+        info_dict['time(GBFS)'] = result['time']
+
+        """LH"""
+        for i in range(1,8):
+            lh= FixedDepthLookaheadPlanner(stop_depth = i, heuristic_function=partial(gc_heuristic, planner=planner, lw=lw), repeat_check=False)
+            result = lh.search_full_sol(searchProblem)
+
+            succ_dict = {}
+            for info in result['nodes_info']:
+                if (info[-1]):
+                    succ_dict[str(info[-1].state)] = succ_dict.get(str(info[-1].state), 0) + 1
+
+            info_dict['action_count(LH' + str(i) + ')'] = succ_dict
+            info_dict['time(LH' + str(i) + ')'] = result['time']
 
         """a-lh"""
         alh = AdaptiveLookaheadPlanner(ea_stop_det, heuristic_function=partial(gc_heuristic, planner=planner, lw=lw), average_update=False)
